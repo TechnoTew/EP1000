@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Tools</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -22,57 +22,16 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: lightgrey;">
-        <a class="navbar-brand" href="#">
-            <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                class="d-inline-block align-top" alt="">
-            Insert Image Here
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <script>
+        // load nav bar
+        $(function () {
+            $("div#nav").load("/html/navbar.html");
+        });
+    </script>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">Home</a>
-                </li>
+    <div id="nav"></div>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="./aboutme.html">About Me</a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link" href="./tools.html">Tools</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="./timeline.html">Timeline</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Projects
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Temp Proj 1</a>
-                        <a class="dropdown-item" href="#">Temp Proj 2</a>
-                        <!-- Dropdown Divider -->
-                        <!-- <div class="dropdown-divider"></div> -->
-                        <a class="dropdown-item" href="#">Temp Proj 3</a>
-                    </div>
-                </li>
-            </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
-        </div>
-    </nav>
-
-    <div id="main"                                                                                          >
+    <div id="main">
         <h2>Tools used in this course</h2>
         <table class="table" style="background-color: lightgrey; border-radius: 0.5rem;">
             <thead>
@@ -98,8 +57,8 @@
 
                 <tr>
                     <td>Vector Editor</td>
-                    <td>InkScape</td>
-                    <td>Free, Ease of use</td>
+                    <td>Adobe Illustrator</td>
+                    <td>Free (provided by school), Ease of use</td>
                 </tr>
 
                 <tr>
@@ -111,8 +70,8 @@
 
                 <tr>
                     <td>Image Resizer</td>
-                    <td>FastOne Photo Resizer</td>
-                    <td>Free</td>
+                    <td>Microsoft PowerToys Windows Resizer</td>
+                    <td>Free, easy integration with Windows File Manager</td>
                 </tr>
 
 

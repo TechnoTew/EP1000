@@ -23,56 +23,16 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: lightgrey;">
-        <a class="navbar-brand" href="#">
-            <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                class="d-inline-block align-top" alt="">
-            Insert Image Here
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">Home</a>
-                </li>
+    <script>
+        // load nav bar
+        $(function () {
+            $("div#nav").load("/html/navbar.html");
+        });
+    </script>
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="./aboutme.html">About Me</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="./tools.html">Tools</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="./timeline.html">Timeline</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Projects
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Temp Proj 1</a>
-                        <a class="dropdown-item" href="#">Temp Proj 2</a>
-                        <!-- Dropdown Divider -->
-                        <!-- <div class="dropdown-divider"></div> -->
-                        <a class="dropdown-item" href="#">Temp Proj 3</a>
-                    </div>
-                </li>
-            </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
-        </div>
-    </nav>
-
+    <div id="nav"></div>
+    
     <div id="main">
         <div id="personalInformation"
             style="border-radius: 0.5rem; background-color: lightgrey; padding: 1rem; margin-bottom: 1rem;">
@@ -86,7 +46,7 @@
                     <p>Email: jingan.20@ichat.sp.edu.sg</p>
                 </div>
                 <div class="col-3">
-                    <img class="img-fluid" src="../assets/pic.png" alt="Pic" style="width: 100%;">
+                    <img class="img-fluid" src="../assets/profpic.png" alt="Pic" style="width: 60%;">
                 </div>
             </div>
         </div>
@@ -94,12 +54,15 @@
         <div id="aboutme"
             style="border-radius: 0.5rem; background-color: lightgrey; padding: 1rem; margin-bottom: 1rem;">
             <h3>About Me</h3>
-            <p>Hello, I'm a guy that's usually quiet in class and does my own thing. I enjoy gaming and coding discord bots in my free time.</p>
+            <p>Hello, I'm a guy that's usually quiet in class and does my own thing. I enjoy gaming and coding discord
+                bots in my free time.</p>
         </div>
 
         <div id="whyChooseDigifab" style="border-radius: 0.5rem; background-color: lightgrey; padding: 1rem;">
             <h3>Why did I choose Digital Fabrication (EP1000)?</h3>
-            <p>I chose this module because of my interest in making things. I do not know much about 3D Printing or Laser Cutting so I think it would be useful skills to pick up. It is also different from what my own course entails so I felt that it would be an interesting experience.</p>
+            <p>I chose this module because of my interest in making things. I do not know much about 3D Printing or
+                Laser Cutting so I think it would be useful skills to pick up. It is also different from what my own
+                course entails so I felt that it would be an interesting experience.</p>
         </div>
 
 

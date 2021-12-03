@@ -1,3 +1,19 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #main {
     padding: 1rem;
+    background-color: rgb(224, 221, 221);
+}
+
+.nav-item a:hover {
+    color: blue !important;
+}
+
+footer {
+    text-align: right;
+    padding-right: 1rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }

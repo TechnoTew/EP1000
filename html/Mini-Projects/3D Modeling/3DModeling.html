@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // load nav bar
+        $(function () {
+            $("div#nav").load("/html/navbar.html");
+            $("div#footer").load("/html/footer.html");
+        });
+    </script>
+
+    <div id="nav"></div>
+
+    <div id="main">
+        <h4>3D Modelling</h4>
+
+        <h5>Sections</h5>
+        <ul>
+            <li><a href="knightChessPiece">Knight Chess Piece</a></li>
+        </ul>
+
+        <h5>Knight Chess Piece</h5>
+        <h6>Requirements</h6>
+        <ul>
+            <li>Base: 30mm</li>
+            <li>Height: 50mm</li>
+            <li>Head Thickness: 5mm</li>
+            <li>Hollow Base</li>
+        </ul>
+        <p>Firstly, I found a <a href="https://toppng.com/knight-svg-horse-silhouette-knight-chess-piece-PNG-free-PNG-Images_164787">picture</a> to serve as the base for the sketch. I first created a bounding box of 50mm height and 30mm width using a rectangle and scaled the image to fit snugly inside the box. This achieves the base and height requirement of this task</p>
+        <img src="/assets/ChessPieceStep1.png" alt="Chess Piece Step 1 Picture" style="width: 40%; height: auto;">
+
+        <p>Secondly, I used the line, fillet, and 3 point arc tools to sketch out a 2d profile of the base of the chestpiece. And afterwards, I used the revolve tool to repeat the plane across the y axis to form the base of the chess piece.</p>
+        <img src="/assets/ChessPieceStep2.png" alt="Chess Piece Step 2 Picture 1" style="width: 40%; height: auto;">
+        <img src="/assets/ChessPieceStep2P2.png" alt="Chess Piece Step 2 Picture 2" style="width: 40%; height: auto;">
+
+        <p>Thirdly, for the head of the chess piece, I used the Fit Point Spline, 3 point arc, and lines to design it </p>
+        <img src="/assets/ChessPieceStep3.png" alt="Chess Piece Step 3" style="width: 40%; height: auto;">
+
+        <p>Fourth, extruding the head of the chess piece to 5mm total</p>
+
+
+    </div>
+
+    <div id="footer"></div>
+</body>
+</html>
