@@ -2,9 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    background-color: white;
+    height: 100%;
+}
+
 #main {
     padding: 1rem;
     background-color: rgb(224, 221, 221);
+    min-height: 100%;
 }
 
 .nav-item a:hover {
@@ -16,4 +22,11 @@ footer {
     padding-right: 1rem;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+}
+
+.box {
+    border-radius: 0.5rem;
+    background-color: darkgrey;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }

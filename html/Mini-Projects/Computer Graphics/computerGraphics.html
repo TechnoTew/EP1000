@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <style>
+        img {
+            border: 3px solid black;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,22 +43,87 @@
 
         <h5>Sections</h5>
         <ul>
+            <li><a href="#difference">Difference between Raster Graphics and Vector Graphics</a></li>
             <li><a href="#raster">Raster</a></li>
             <li><a href="#vector">Vector</a></li>
         </ul>
+
+        <h5 id="difference">Difference between Raster Graphics and Vector Graphics</h5>
+        <p>Raster graphics are made up of coloured pixels on the screen. This means that pictures, which are a type of
+            raster graphics, are dependent on resolution and cannot be scaled up without a difference in quality. Vector
+            graphics on the other hand are rendered using mathematical formulas. This allows us to scale them up
+            infinitely without a loss in quality. Examples of vector graphics includes fonts.</p>
         <!-- 
             Choose one of your selfies
-• Remove the background of the image
-• Substitute with a seaside scene
-• Resize to a width of 1024 pixels
-• Document your work in your project blog
-         -->
+            • Remove the background of the image
+            • Substitute with a seaside scene
+            • Resize to a width of 1024 pixels
+            • Document your work in your project blog
+        -->
         <h5 id="raster">Raster</h5>
-        <p>For our first task, we were told to choose one of our selfies and substitute a seaside scene into the background.</p>
+        <p>For our first task, we were told to choose one of our selfies and substitute a seaside scene into the
+            background.</p>
 
-        <p><b>Step 1: Find a personal selfie</b></p>
-        <img src="/assets/profpic.png" alt="selfie" style="width: 10%; height: auto; border: 3px solid black;">
+        <div class="box">
+            <p><b>Step 1: Find a personal selfie</b></p>
+            <img src="/assets/Computer Graphics/profpic (Large Icon).png" alt="selfie" style="width: 10%;">
 
+        </div>
+
+        <div class="box">
+            <p><b>Step 2: Find a background image</b></p>
+            <img src="/assets/Computer Graphics/seaside.jpg" alt="Seaside picture" style="width: 10%;">
+
+        </div>
+
+        <div class="box">
+            <p><b>Step 3: Open Photoshop</b></p>
+            <p>First create a new file with the dimensions 1024x1024, which would be used for our profile picture</p>
+        </div>
+
+
+        <div class="box">
+            <p><b>Step 4: Open up the selfie image in photoshop</b></p>
+            <p>The image should open in another tab as shown below</p>
+            <img src="/assets/Computer Graphics/openProfilePic.png" alt="Photoshop Image" style="width: 30%;">
+        </div>
+
+        <div class="box">
+            <p><b>Step 5: Removing the existing background of the selfie</b></p>
+            <p>Using the Magic Wand Tool and clicking on the background of the image, we can see that it does a pretty
+                good job of picking out the background of the image</p>
+
+            <figure>
+                <img src="/assets/Computer Graphics/usingMagicWandTool.png" alt="Magic Wand Tool selection"
+                    style="width: 30%;">
+                <figcaption>Before</figcaption>
+            </figure>
+            <figure>
+                <img src="/assets/Computer Graphics/afterUsingMagicWandTool.png" alt="Magic Wand Tool results"
+                    style="width: 30%;">
+                <figcaption>After</figcaption>
+            </figure>
+
+            <p>With most of the background out of the way, I used the Lasso tool to remove the parts where the magic
+                wand could not remove.</p>
+            <img src="/assets/Computer Graphics/afterLasso.png" alt="After Lasso Tool" style="width: 30%;">
+        </div>
+
+        <div class="box">
+            <p><b>Step 6: Open the seaside background and moving it to the main canvas</b></p>
+            <p>Open the image in photoshop similarly to step 4 but copying the whole image over to the main canvas by
+                using Ctrl-A and Ctrl-C</p>
+            <p>As the image is bigger than the canvas, the rest of the image is truncated and we can adjust the image so
+                that a specific part of the image can be set as the background for our final picture</p>
+            <img src="/assets/Computer Graphics/afterPlacingBackground.png" alt="After background was placed"
+                style="width: 30%;">
+        </div>
+
+        <div class="box">
+            <p><b>Step 7: Copy the profile picture (with background removed) into the main canvas</b></p>
+            <p>After merging the 2, we have the final product</p>
+            <img src="/assets/Computer Graphics/finalProductInImage.png" alt="Final Product" style="width: 20%;">
+        </div>
 
 
 

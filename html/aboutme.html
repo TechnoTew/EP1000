@@ -28,14 +28,14 @@
         // load nav bar
         $(function () {
             $("div#nav").load("/html/navbar.html");
+            $("div#footer").load("/html/footer.html");
         });
     </script>
 
     <div id="nav"></div>
-    
+
     <div id="main">
-        <div id="personalInformation"
-            style="border-radius: 0.5rem; background-color: lightgrey; padding: 1rem; margin-bottom: 1rem;">
+        <div id="personalInformation" class="box">
             <h3>Info</h3>
             <div class="row">
                 <div class="col-9">
@@ -51,22 +51,23 @@
             </div>
         </div>
 
-        <div id="aboutme"
-            style="border-radius: 0.5rem; background-color: lightgrey; padding: 1rem; margin-bottom: 1rem;">
+        <div id="aboutme" class="box">
             <h3>About Me</h3>
             <p>Hello, I'm a guy that's usually quiet in class and does my own thing. I enjoy gaming and coding discord
                 bots in my free time.</p>
         </div>
 
-        <div id="whyChooseDigifab" style="border-radius: 0.5rem; background-color: lightgrey; padding: 1rem;">
+        <div id="whyChooseDigifab" class="box">
             <h3>Why did I choose Digital Fabrication (EP1000)?</h3>
             <p>I chose this module because of my interest in making things. I do not know much about 3D Printing or
                 Laser Cutting so I think it would be useful skills to pick up. It is also different from what my own
                 course entails so I felt that it would be an interesting experience.</p>
         </div>
 
-
     </div>
+
+    <div id="footer"></div>
+
 </body>
 
 </html>
