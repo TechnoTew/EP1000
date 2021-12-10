@@ -33,3 +33,8 @@ footer {
     margin-bottom: 1rem;
 }
 
+.table {
+    background-color: rgb(48, 48, 48);
+    border-radius: 0.5rem;
+
+}
