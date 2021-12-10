@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <style>
+        .box img {
+            width: 40%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -32,14 +38,14 @@
     <div id="nav"></div>
 
     <div id="main">
-        <h4>3D Modelling</h4>
+        <h4>3D Modeling</h4>
 
         <h5>Sections</h5>
         <ul>
-            <li><a href="knightChessPiece">Knight Chess Piece</a></li>
+            <li><a href="#knightChessPiece">Knight Chess Piece</a></li>
         </ul>
 
-        <h5>Knight Chess Piece</h5>
+        <h5 id="knightChessPiece">Knight Chess Piece</h5>
         <h6>Requirements</h6>
         <ul>
             <li>Base: 30mm</li>
@@ -47,18 +53,39 @@
             <li>Head Thickness: 5mm</li>
             <li>Hollow Base</li>
         </ul>
-        <p>Firstly, I found a <a href="https://toppng.com/knight-svg-horse-silhouette-knight-chess-piece-PNG-free-PNG-Images_164787">picture</a> to serve as the base for the sketch. I first created a bounding box of 50mm height and 30mm width using a rectangle and scaled the image to fit snugly inside the box. This achieves the base and height requirement of this task</p>
-        <img src="/EP1000/assets/ChessPieceStep1.png" alt="Chess Piece Step 1 Picture" style="width: 40%; height: auto;">
 
-        <p>Secondly, I used the line, fillet, and 3 point arc tools to sketch out a 2d profile of the base of the chestpiece. And afterwards, I used the revolve tool to repeat the plane across the y axis to form the base of the chess piece.</p>
-        <img src="/EP1000/assets/ChessPieceStep2.png" alt="Chess Piece Step 2 Picture 1" style="width: 40%; height: auto;">
-        <img src="/EP1000/assets/ChessPieceStep2P2.png" alt="Chess Piece Step 2 Picture 2" style="width: 40%; height: auto;">
+        <div class="box">
+            <p><b>Step 1: Find a picture to serve as the base of the sketch</b></p>
+            <p>Source of <a href="https://toppng.com/knight-svg-horse-silhouette-knight-chess-piece-PNG-free-PNG-Images_164787">picture</a>. I first created a bounding box of 50mm height and 30mm width using a rectangle and scaled the image to fit snugly inside the box. This achieves the base and height requirement of this task</p>
+            <img src="/EP1000/assets/3D Modeling/ChessPieceStep1.png" alt="Chess Piece Step 1 Picture">    
+        </div>
+        
+        <div class="box">
+            <p><b>Step 2: Designing the chesspiece bottom</b></p>
+            <p>I used the line, fillet, and 3 point arc tools to sketch out a 2d profile of the base of the chestpiece. And afterwards, I used the revolve tool to repeat the plane across the y axis to form the base of the chess piece.</p>
+            <img src="/EP1000/assets/3D Modeling/ChessPieceStep2.png" alt="Chess Piece Step 2 Picture 1">
+            <img src="/EP1000/assets/3D Modeling/ChessPieceStep2P2.png" alt="Chess Piece Step 2 Picture 2">
+    
+        </div>
+        
+        <div class="box">
+            <p><b>Step 3: Designing the top portion of the chesspiece</b></p>
+            <p>For the head of the chess piece, I used the Fit Point Spline, 3 point arc, and lines to design it, and extruded the head of the chess piece to 2.5mm on each side, 5mm total.</p>
+            <img src="/EP1000/assets/3D Modeling/ChessPieceStep3.png" alt="Chess Piece Step 3 Picture 1">
+            <img src="/EP1000/assets/3D Modeling/ChessPieceStep3P2.png" alt="Chess Piece Step 3 Picture 2">
+        </div>
 
-        <p>Thirdly, for the head of the chess piece, I used the Fit Point Spline, 3 point arc, and lines to design it </p>
-        <img src="/EP1000/assets/ChessPieceStep3.png" alt="Chess Piece Step 3" style="width: 40%; height: auto;">
+        <div class="box">
+            <p><b>Step 4: Printing the chesspiece and clearing supports from print</b></p>
+            <p>After printing the chesspiece, I had to remove the supports using pliers and sand the rough edges down</p>
+            <img src="/EP1000/assets/3D Modeling/PrintedChessPieceWithSupports.jpeg" alt="Printed Chess Piece with supports">
+            <img src="/EP1000/assets/3D Modeling/PrintedChessPieceWithoutSupports.jpeg" alt="Printed Chess Piece with supports removed">
+        </div>
 
-        <p>Fourth, extruding the head of the chess piece to 5mm total</p>
-
+        <div class="box">
+            <p>An interactive model of the chesspiece is shown below:</p>
+            <iframe src="https://ichat2665.autodesk360.com/shares/public/SH9285eQTcf875d3c5392d06965532374c80?mode=embed" width="100%" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+        </div>
 
     </div>
 
