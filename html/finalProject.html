@@ -32,7 +32,156 @@
     <div id="nav"></div>
 
     <div id="main">
+        <h4>Final Project</h4>
+
+        <br>
+
+            <h5>Sections</h5>
+            <ul>
+                <li><a href="#whatDoesItDo">What does it do?</a></li>
+                <li><a href="#features">What are its features</a></li>
+                <li><a href="#build">How will I build it?</a></li>
+                <li><a href="#billOfMaterials">Bill of materials</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
         
+        <div class="box">
+            <h5 id="whatDoesItDo">What does it do?</h5>
+
+            <p>The macropad acts a HID (Hardware Input Device) to a computer. It can open aplpications or execute multiple keystrokes at the touch of a single button, while being fully customizable.</p>
+        </div>
+
+        <br>
+
+        <div class="box">
+            <h5 id="features">Features</h5>
+
+            <ul>
+                <li>11 assignable Gateron mechanical switches for 11 custom functions, including but not limited to
+                    <ul>
+                        <li>Discord control (muting, deafening, screen sharing)</li>
+                        <li>Music control (pause/play, skip, restart track)</li>
+                        <li>Misc features (project button, Nvidia shadowplay)</li>
+                    </ul>
+                </li>
+
+                <li>Rotary Encoder for Volume Control</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <div class="box">
+            <h5 id="build" style="margin-bottom: 1rem;">Build</h5>
+
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th>CAD Design, Graphics</th>
+                        <td>Macropad Housing, Switch Plate</td>
+                    </tr>
+
+                    <tr>
+                        <th>Laser cutting</th>
+                        <td>Switch Plate (to attach the mechanical switches)</td>
+                    </tr>
+
+                    <tr>
+                        <th>3D Printing</th>
+                        <td>Macropad Housing</td>
+                    </tr>
+
+                    <tr>
+                        <th>Micro-controller</th>
+                        <td>Raspberry Pi Pico running CircuitPython (HID input interface)</td>
+                    </tr>
+
+                    <tr>
+                        <th>Input Devices</th>
+                        <td>Gateron Yellow mechanical switches</td>
+                    </tr>
+
+                    <tr>
+                        <th>Output Devices</th>
+                        <td>Neopixel WS2812 LEDs (lighting), Raspberry Pi Pico (Keyboard output)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+
+        <div class="box">
+            <h5 id="billOfMaterials" style="margin-bottom: 1rem;">Bill of materials</h5>
+
+            <table class="table table-bordered">
+                <thead>
+                    <th scope="col">S/N</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Item Description</th>
+                    <th scope="col">Approx Cost</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Raspberry Pi Pico (USB - C)</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>20</td>
+                        <td>1N4148 (Diodes)</td>
+                        <td>$2.34</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>USB A - C</td>
+                        <td>$2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>12</td>
+                        <td>Gateron Yellow mechanical switches</td>
+                        <td>$0</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>Rotary Encoder (EC11)</td>
+                        <td>$2.51/5 pieces</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>WS2812 Neopixel</td>
+                        <td>~$6.55/m</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>1</td>
+                        <td>Transparent Acrylic Sheet (A4 Size)</td>
+                        <td>~$5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+
+        <div class="box">
+            <h5 id="references">References</h5>
+
+            <ul>
+                <li><a href="https://matt3o.com/hand-wiring-a-custom-keyboard/">Matrix Wiring Guide</a></li>
+                <li><a href="https://www.hackster.io/1NextPCB/how-to-build-a-pico-macro-pad-3638e6">How to build a macro pad with Raspberry Pi Pico</a></li>
+                <li><a href="https://learn.adafruit.com/rotary-encoder/circuitpython">Rotary Encoder in CircuitPython</a></li>
+            </ul>
+        </div>
+
+
     </div>
 
     <div id="footer"></div>
