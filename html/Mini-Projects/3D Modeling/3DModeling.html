@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Modelling</title>
+    <title>3D Modeling</title>
 
     <link rel="stylesheet" href="/EP1000/css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <style>
         .box img {
             width: 40%;
             height: auto;
         }
+
+        .d-flex img {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            text-align: center;
+        }
+
+        .step {
+            margin-bottom: 0.5rem;
+        }
+
+        hr {
+            background-color: grey;
+        }
     </style>
 </head>
+
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -40,71 +61,455 @@
     <div id="main">
         <h4>3D Modeling</h4>
 
+        <br>
+
         <h5>Sections</h5>
         <ul>
             <li><a href="#knightChessPiece">Knight Chess Piece</a></li>
-            <li><a href="#laserCutBox">Laser-Cut Box with Lid</a></li>
+            <li><a href="#laserCutBox">Laser-Cut Box with Lid</a>
+                <ul>
+                    <li><a href="#boxFront">Front of Box</a></li>
+                    <li><a href="#boxSide">Side of Box</a></li>
+                    <li><a href="#boxBack">Back of Box</a></li>
+                    <li><a href="#boxSide2">Side of Box (2)</a></li>
+                    <li><a href="#boxBase">Base of Box</a></li>
+                    <li><a href="#boxHinge">Hinge of Box</a></li>
+                    <li><a href="#boxLid">Lid of Box</a></li>
+                </ul>
+            </li>
         </ul>
 
-        <h5 id="knightChessPiece">Knight Chess Piece</h5>
-        <h6>Requirements</h6>
-        <ul>
-            <li>Base: 30mm</li>
-            <li>Height: 50mm</li>
-            <li>Head Thickness: 5mm</li>
-            <li>Hollow Base</li>
-        </ul>
+        <br>
+
+        <div class="box">
+            <h5 id="knightChessPiece">Knight Chess Piece</h5>
+            <h6>Requirements</h6>
+            <ul>
+                <li>Base: 30mm</li>
+                <li>Height: 50mm</li>
+                <li>Head Thickness: 5mm</li>
+                <li>Hollow Base</li>
+            </ul>
+        </div>
+
 
         <div class="box">
             <p><b>Step 1: Find a picture to serve as the base of the sketch</b></p>
-            <p>Source of <a href="https://toppng.com/knight-svg-horse-silhouette-knight-chess-piece-PNG-free-PNG-Images_164787">picture</a>. I first created a bounding box of 50mm height and 30mm width using a rectangle and scaled the image to fit snugly inside the box. This achieves the base and height requirement of this task</p>
-            <img src="/EP1000/assets/3D Modeling/ChessPieceStep1.png" alt="Chess Piece Step 1 Picture">    
+            <p>Source of <a
+                    href="https://toppng.com/knight-svg-horse-silhouette-knight-chess-piece-PNG-free-PNG-Images_164787">picture</a>.
+                I first created a bounding box of 50mm height and 30mm width using a rectangle and scaled the image to
+                fit snugly inside the box. This achieves the base and height requirement of this task</p>
+            <img src="/EP1000/assets/3D Modeling/ChessPieceStep1.png" alt="Chess Piece Step 1 Picture">
         </div>
-        
+
         <div class="box">
             <p><b>Step 2: Designing the chesspiece bottom</b></p>
-            <p>I used the line, fillet, and 3 point arc tools to sketch out a 2d profile of the base of the chestpiece. And afterwards, I used the revolve tool to repeat the plane across the y axis to form the base of the chess piece.</p>
+            <p>I used the line, fillet, and 3 point arc tools to sketch out a 2d profile of the base of the chestpiece.
+                And afterwards, I used the revolve tool to repeat the plane across the y axis to form the base of the
+                chess piece.</p>
             <img src="/EP1000/assets/3D Modeling/ChessPieceStep2.png" alt="Chess Piece Step 2 Picture 1">
             <img src="/EP1000/assets/3D Modeling/ChessPieceStep2P2.png" alt="Chess Piece Step 2 Picture 2">
-    
+
         </div>
-        
+
         <div class="box">
             <p><b>Step 3: Designing the top portion of the chesspiece</b></p>
-            <p>For the head of the chess piece, I used the Fit Point Spline, 3 point arc, and lines to design it, and extruded the head of the chess piece to 2.5mm on each side, 5mm total.</p>
+            <p>For the head of the chess piece, I used the Fit Point Spline, 3 point arc, and lines to design it, and
+                extruded the head of the chess piece to 2.5mm on each side, 5mm total.</p>
             <img src="/EP1000/assets/3D Modeling/ChessPieceStep3.png" alt="Chess Piece Step 3 Picture 1">
             <img src="/EP1000/assets/3D Modeling/ChessPieceStep3P2.png" alt="Chess Piece Step 3 Picture 2">
         </div>
 
         <div class="box">
             <p><b>Step 4: Printing the chesspiece and clearing supports from print</b></p>
-            <p>After printing the chesspiece, I had to remove the supports using pliers and sand the rough edges down</p>
-            <img src="/EP1000/assets/3D Modeling/PrintedChessPieceWithSupports.jpeg" alt="Printed Chess Piece with supports">
-            <img src="/EP1000/assets/3D Modeling/PrintedChessPieceWithoutSupports.jpeg" alt="Printed Chess Piece with supports removed">
+            <p>After printing the chesspiece, I had to remove the supports using pliers and sand the rough edges down
+            </p>
+            <img src="/EP1000/assets/3D Modeling/PrintedChessPieceWithSupports.jpeg"
+                alt="Printed Chess Piece with supports">
+            <img src="/EP1000/assets/3D Modeling/PrintedChessPieceWithoutSupports.jpeg"
+                alt="Printed Chess Piece with supports removed">
         </div>
 
         <div class="box">
             <p>An interactive model of the chesspiece is shown below:</p>
-            <iframe src="https://ichat2665.autodesk360.com/shares/public/SH9285eQTcf875d3c5392d06965532374c80?mode=embed" width="100%" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+            <iframe
+                src="https://ichat2665.autodesk360.com/shares/public/SH9285eQTcf875d3c5392d06965532374c80?mode=embed"
+                width="100%" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+                frameborder="0"></iframe>
         </div>
 
-        <h5 id="laserCutBox">Laser-Cut Box with Lid</h5>
-        <h6>Requirements</h6>
-        <ul>
-            <li>Box must be parametric (changing parameters affects the box)</li>
-            <li>Have a lid</li>
-        </ul>
+        <br>
+        <br>
 
         <div class="box">
+            <h5 id="laserCutBox">Laser-Cut Box with Lid</h5>
+            <h6>Requirements</h6>
+            <ul>
+                <li>Box must be parametric (changing parameters affects the box)</li>
+                <li>Have a lid</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <div class="box">
+            <h5 style="margin-bottom: 1rem;">Reference Image for the box (taken from presentation slide)</h5>
+            <img src="/EP1000/assets/3D Modeling/laserCutBoxReferenceImage.png" alt="Box Reference Image">
+        </div>
+
+        <div class="box">
+            <h5 style="margin-bottom: 1rem;">Box Parameters</h5>
             <img src="/EP1000/assets/3D Modeling/boxParameters.png" alt="Box Parameters">
         </div>
+
+        <div class="box">
+            <h5 id="boxFront">Front Face of box</h5>
+
+            <div class="step">
+                <p>1. A rectangle sketch was created for the front face. The tab spacing for both the side and the
+                    front face was also drawn on the sketch. The face is constrained by the length and height defined by
+                    the
+                    parameters at the start.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/FrontSketch.png" alt="Front sketch">
+
+                        <figcaption>Front Sketch</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/FrontExtrude.png" alt="Front extrude">
+
+                        <figcaption>Front Extrude</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="step">
+                <p>2. The tabs along the height of the box were cut out using the extrude tool. This cut is
+                    considered a feature, which allows me to use the Rectangular Pattern tool to duplicate the cuts
+                    along
+                    the height and also mirror it to the other side of the front face.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/FrontSideCut.png" alt="Front Cut (Side)">
+                        <figcaption>Front Cut (Side)</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/FrontSidePattern.png"
+                            alt="Front Pattern (Side)">
+                        <figcaption>Front Pattern (Side)</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="step">
+                <p>3. The front tabs along the bottom of the box were also cut out using the extrude tool. And similarly
+                    patterned using the tool mentioned in the above step.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/FrontBottomCut.png" alt="Front Cut (Bottom)">
+                        <figcaption>Front Cut (Bottom)</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/FrontBottomPattern.png"
+                            alt="Front Pattern (Bottom)">
+                        <figcaption>Front Pattern (Bottom)</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h5 id="boxSide">Side Face of box</h5>
+
+            <div class="step">
+                <p>1. We start by creating a new component called side. Similarly to step 1 of the front face, a
+                    rectangular sketch was created as the side face. The face
+                    is constrained by the height and the width of the box.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideSketch.png" alt="Side Sketch">
+                        <figcaption>Side Sketch</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideExtrude.png" alt="Side Extrude">
+                        <figcaption>Side Extrude</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="step">
+                <p>2. The tabs for the side face were then created by combining the front face and the side face
+                    together, and then using the cut selection, while selecting keep tools. This results in the side
+                    face getting cut, while also keeping the front face.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideCombine.png" alt="Side Cut">
+                        <figcaption>Side Cut</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideCutComplete.png"
+                            alt="Side Cut Completed">
+                        <figcaption>Side Cut Completed</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="step">
+                <p>3. The tabs along the bottom of the side face were cut using the extrude tool simlar to step 3 of the
+                    front face section, and patterned accordingly.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideBottomExtrude.png"
+                            alt="Side Cut (Bottom)">
+                        <figcaption>Side Cut (Bottom)</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideBottomPattern.png"
+                            alt="Side Pattern (Bottom)">
+                        <figcaption>Side Pattern (Bottom)</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h5 id="boxBack">Back Face of box</h5>
+
+            <div class="step">
+                <p>1. We start by creating a midplane in between the front and the back faces of the side component.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideMidplaneConstruction.png"
+                            alt="Side Midplane Construction">
+                        <figcaption>Side Midplane Construction</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideMidplaneConstructed.png"
+                            alt="Side Midplane Constructed">
+                        <figcaption>Side Midplane Constructed</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="step">
+                <p>2. We then mirror the front component using the mirror tool under the creation section, using the
+                    midplane as the mirror plane. As we can see, the resultant component is identical to the front
+                    component, and also in the right place.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/MirrorFrontFace.png"
+                            alt="Front Component Mirrored">
+                        <figcaption>Front Component Mirrored</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/MirroredFrontFace.png"
+                            alt="The Mirrored Front Face">
+                        <figcaption>The Mirrored Front Face</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h5 id="boxSide2">Side Face of box (2)</h5>
+
+            <div class="step">
+                <p>1. The side section from the side was then combined with the mirrored front face to complete both
+                    sides of the tabs of the side face.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideCombine2.png" alt="Side Combine (2)">
+                        <figcaption>Side Combine (2)</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/SideCombine2Finished.png"
+                            alt="Side Combine (2) finished">
+                        <figcaption>Side Combine (2) finished</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="step">
+                <p>2. A midplane was again created, using the leftmost and rightmost faces of the front face</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/FrontMidplaneConstruction.png"
+                            alt="Front Midplane Construction">
+                        <figcaption>Front Midplane Construction</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/FrontMidplaneConstructed.png"
+                            alt="Front Midplane Construction finished">
+                        <figcaption>Front Midplane Construction finished</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="step">
+                <p>3. The side face was mirrored using the mirror tool across the midplane constructed in the previous
+                    step</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/MirrorSideFace.png" alt="Mirror Side Face">
+                        <figcaption>Mirror Side Face</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/MirroredSideFace.png"
+                            alt="Mirrored Side Face">
+                        <figcaption>Mirrored Side Face</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h5 id="boxBase">Base of Box</h5>
+
+            <div class="step">
+                <p>1. First, the base sketch was created with one of the edges relative to the top face of the bottom
+                    tabs of the box. The base was then extruded to the thickness of the material.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/BaseSketch.png" alt="Base Sketch">
+                        <figcaption>Base Sketch</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/BaseExtrude.png" alt="Base Extrude">
+                        <figcaption>Base Extrude</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="step">
+                <p>2. Next the base sketch was combined with the side panels and cut.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/BaseCombine.png" alt="Base Combine">
+                        <figcaption>Base Combine</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/BaseCombined.png" alt="Base Combined">
+                        <figcaption>Base Combined</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h5 id="boxHinge">Hinge of Box</h5>
+
+            <div class="step">
+                <p>1. To make the hinge, I decided to sketch a circle on the side of the box for a peg of size
+                    thickness. I went back in the history timeline to edit the side sketch for the side panel. After
+                    editing and saving the sketch, the model automatically updated and we end up with hinges on both
+                    sides of the box.</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/HingeSketch.png" alt="Hinge Sketch">
+                        <figcaption>Hinge Sketch</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/HingeExtrude.png" alt="Hinge Extrude">
+                        <figcaption>Hinge Extrude</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h5 id="boxLid">Lid of Box</h5>
+
+            <div class="step">
+                <p>1. To make the lid, the geometries of the side panels of the box were projected onto the lid sketch</p>
+
+                <div class="d-flex">
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/LidProject.png" alt="Lid Project">
+                        <figcaption>Lid Project</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/LidSketch.png" alt="Lid Sketch">
+                        <figcaption>Lid Sketch</figcaption>
+                    </figure>
+                </div>
+
+                <hr>
+
+                <div class="step">
+                    <p>2. The sketch was then extruded to the thickness of the thickness, and the lid is completed. This marks the end of the box construction.</p>
+
+                    <div class="d-flex">
+                        <figure>
+                            <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/LidExtrude.png" alt="Lid Extrude">
+                            <figcaption>Lid Extrude</figcaption>
+                        </figure>
+    
+                        <figure>
+                            <img src="/EP1000/assets/3D Modeling/Laser-Cut Box/BoxExploded.png" alt="Final Box (Exploded)">
+                            <figcaption>Final Box (Exploded)</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="box">
             <p>An interactive model of the box is shown below:</p>
-            <iframe src="https://ichat2665.autodesk360.com/shares/public/SH9285eQTcf875d3c539e516da06304ad3da?mode=embed" width="100%" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0" hidden></iframe>
+            <iframe
+                src="https://ichat2665.autodesk360.com/shares/public/SH9285eQTcf875d3c539e516da06304ad3da?mode=embed"
+                width="100%" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+                frameborder="0"></iframe>
         </div>
- 
+
     </div>
 
     <div id="footer"></div>
 </body>
+
 </html>
