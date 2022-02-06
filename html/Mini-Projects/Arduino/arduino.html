@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino</title>
+
+    <link rel="stylesheet" href="/EP1000/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // load nav bar
+        $(function () {
+            $("div#nav").load("/EP1000/html/navbar.html");
+            $("div#footer").load("/EP1000/html/footer.html");
+        });
+    </script>
+
+    <div id="nav"></div>
+
+    <div id="main">
+        <h4>Arduino</h4>
+
+        <br>
+
+        <h5>Sections</h5>
+        <ul>
+            <li><a href="#555Timer">555 Timer</a></li>
+            <li><a href="#ledBlink">Simple LED Control - Blink</a></li>
+            <li><a href="#oneSwitchManyStates">One Switch - Many States</a></li>
+        </ul>
+
+        <div class="box" id="555Timer">
+            <h5>555 Timer</h5>
+            <p>The task given was to convert this 555 schematic into a working circuit on TinkerCAD</p>
+            <img style="display: block" src="/EP1000/assets/Arduino/555 schematic.png" alt="555 Schematic" height="200">
+
+            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/d50Pe10WHQp?editbtn=1" frameborder="0"
+                marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="box" id="ledBlink">
+            <h5>Simple LED Control - Blink</h5>
+            <p>The task given was to connect 3 LEDs to the breadboard and make them flash in order in a cycle.</p>
+
+            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/lbktuR1UFOq?editbtn=1" frameborder="0"
+                marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="box" id="oneSwitchManyStates">
+            <h5>One Switch - Many States</h5>
+            <p>The task given was to use a single push button to switch between 5 states for a group of 3 LEDs. The LEDs are to flash and after pressing the switch for 3 seconds, the system switches off all LEDs and returns to initial state.</p>
+
+            <h6>Button Bouncing</h6>
+            <p>During the task, I encountered a problem where the button seemingly registers button presses and releases at random intervals. After checking, this situation was caused by the switch bouncing. This is the result of the metal contacts inside the switch repeatedly making and breaking contact when the switch is activated. The diagram below illustrates this situation.</p>
+            <img src="/EP1000/assets/Arduino/button_bounce.jpeg" alt="Button Bounce Image" height="200">
+
+            <h6>How I solved the problem</h6>
+            <div class="row">
+                <div class="col-5">
+                    <img src="/EP1000/assets/Arduino/checkSwitchCode.png" alt="Check Switch Code" width="100%">
+                </div>
+
+                <div class="col">
+                    <p>The program first keeps track of 2 states, the last registered state of the button, and when the function runs, the newly detected state of the button. Should it find that there is a difference between the states, it triggers the branch under the comment "button has since changed state". In that branch, the button checks if the button transitioned into the "on" state or "off" state.</p>
+
+                    <p>If the button transitioned into the "on" state, the program checks if the button's input has stabilized by checking that the state of the switch is still the same after a delay through the use of <i>millis.</i> It then stores the time at which the button was pressed for use in the other branch.</p>
+
+                    <p>If the button transitioned into the "off" state, the program then checks the difference between the current time and the time that the button was pressed to determine if the press was a long press or a short press.</p>
+                </div>
+            </div>
+
+            <h6>Managing the state of the program</h6>
+            <div class="row">
+                <div class="col-5">
+                    <img src="/EP1000/assets/Arduino/managingState.png" alt="Managing state of the program" width="100%">
+                </div>
+
+                <div class="col">
+                    The code here receives input on whether the action was a short press or a long press and decides what action to do next. If the action was a short press, the state of the program is increased by 1, up to 5 where it is then reset to 0 through the use of the <i>modulo</i> operator. If the actionw as a short press, the state of the program is immediately set to 0.
+                </div>
+            </div>
+
+            <h6>Deciding which LEDs to turn on</h6>
+            <div class="row">
+                <div class="col-5">
+                    <img src="/EP1000/assets/Arduino/controlLEDs.png" alt="Controlling LEDs" width="100%">
+                </div>
+
+                <div class="col">
+                    The state of the program is received through the function parameters, and the program first shuts off all LEDs. For states 1 to 4 it will turn the respective LEDs back on but for the rest it will stay off. The <i>(millis() / 100) % 2 == 0</i> allows the LEDs to pulse on and off through the programs duration.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>
