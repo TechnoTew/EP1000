@@ -15,9 +15,20 @@ html, body {
 }
 
 .nav-item a:hover {
-    color: blue !important;
+    color: white !important;
 }
 
+.dropdown-menu {
+    background-color: #343a40 !important
+}
+
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+
+.dropdown-menu a:hover {
+    background-color: grey;
+}
 
 footer {
     text-align: right;
